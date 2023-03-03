@@ -1,0 +1,187 @@
+@font-face {
+  font-family: kalam;
+  src: url(../fonts/Kalam-Regular.ttf);
+}
+
+@font-face {
+  font-family: kalam-bold;
+  src: url(../fonts/Kalam-Bold.ttf);
+}
+
+
+* {
+  font-family: kalam, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  /* background-image: url('https: //source.unsplash.com/1720x1300/?landscape'); */
+  background-image: url(../imgs/1_GsImz-edoeuqCMfKxDus0w.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 120%;
+}
+
+.headline {
+  font-size: 70px;
+  font-family: kalam-bold, 'Courier New', Courier, monospace;
+  -webkit-text-stroke: 3px rgb(255, 255, 255);
+  margin-bottom: 10px;
+
+}
+
+.temp {
+  margin: 0px;
+  font-size: 70px;
+}
+
+.card {
+  box-shadow: 0px 1px 2px 0px rgba(0, 255, 255, 0.7),
+    1px 2px 4px 0px rgba(0, 255, 255, 0.7),
+    2px 4px 8px 0px rgba(0, 255, 255, 0.7),
+    2px 4px 16px 0px rgba(0, 255, 255, 0.7);
+  position: relative;
+  background: #000000d0;
+  color: white;
+  padding: 2rem;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 420px;
+}
+
+#datum-heute {
+  position: absolute;
+  writing-mode: vertical-rl;
+  right: 10px;
+  bottom: 30px;
+}
+
+button {
+  border: none;
+  outline: none;
+  margin: 0.5rem;
+  border-radius: 50%;
+  height: 45px;
+  width: 45px;
+  background: #7c7c7c2b;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+#search-bar {
+  border: none;
+  outline: none;
+  padding: 0.4rem 1rem;
+  border-radius: 24px;
+  background: #7c7c7c2b;
+  color: white;
+  font-size: 24px;
+  width: 80%;
+}
+
+button:hover {
+  background: #7c7c7c6b;
+}
+
+.description {
+  text-transform: capitalize;
+}
+
+.weather.loading,
+.week-container.loading,
+.clock.loading {
+  visibility: hidden;
+  max-height: 20px;
+  position: relative;
+}
+
+
+.weather.loading:after {
+  visibility: visible;
+  content: "Loading...";
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 20px;
+}
+
+.icon {
+  width: 100px;
+  margin: 10px 0px;
+}
+
+
+.week-list {
+
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 35px;
+  -webkit-box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.week-list>li {
+  box-shadow: 0px 1px 2px 0px rgba(0, 255, 255, 0.7),
+    1px 2px 4px 0px rgba(0, 255, 255, 0.7),
+    2px 4px 8px 0px rgba(0, 255, 255, 0.7),
+    2px 4px 16px 0px rgba(0, 255, 255, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 10px;
+  background: #000000d0;
+  color: white;
+  float: left;
+  padding: 20px;
+  cursor: pointer;
+  -webkit-transition: 200ms ease;
+  -o-transition: 200ms ease;
+  transition: 200ms ease;
+  border-radius: 15px;
+}
+
+.week-list>li:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  -webkit-box-shadow: 0 0 40px -5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 40px -5px rgba(0, 0, 0, 0.2)
+}
+
+.day-name {
+  font-size: 25px;
+  display: block;
+  text-align: center;
+}
+
+.day-icon {
+  display: block;
+  height: 30px;
+  width: auto;
+  margin: 0 auto;
+}
+
+.day-temp {
+  font-size: 25px;
+  display: block;
+  text-align: center;
+}
+
+#icon1,
+#icon2,
+#icon3,
+#icon4 {
+  width: 50px;
+
+}
